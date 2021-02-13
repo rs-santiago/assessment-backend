@@ -122,7 +122,6 @@ $(document).ready(function () {
 function carregarProdutos() {
   $.getJSON("../controllers/produto/allProdutos.php", function (response) {
     let html = '';
-    console.log(response);
     response.forEach(element => {
       let categorias = '';
       element.categorias.forEach(categoria => {
@@ -173,8 +172,8 @@ function apagar(id) {
       url: "../controllers/produto/deleteProdutos.php",
       data: data
     }).done(function(response) {
+      alert('Produto deletado!');
       window.location.reload()
-      // console.log(response);
     });
   }
 

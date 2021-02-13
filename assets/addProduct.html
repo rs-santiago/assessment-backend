@@ -107,15 +107,13 @@
         "category" : $('#category').val(),
         "description" : $('#description').val()
       }
-      console.log(data);
       $.ajax({
         method: 'POST',
         url: "../controllers/produto/saveProdutos.php",
         data: data
       }).done(function(response) {
-        console.log(response);
-        // alert('Produto registrado com sucesso!');
-        // window.location.reload();
+        alert('Produto registrado com sucesso!');
+        window.location.reload();
       });
     })
   })

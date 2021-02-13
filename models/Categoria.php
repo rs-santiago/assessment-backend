@@ -28,7 +28,6 @@ class Categoria extends DBConnection{
     function delete($id){
         // String para salvar dados da model de Categoria
         $sqlDelete = "DELETE FROM Categoria WHERE categoria_id=$id";
-        // echo '<pre>'; var_dump($sqlDelete).exit;
         $con = $this->connect();
         $con->query($sqlDelete);
         
